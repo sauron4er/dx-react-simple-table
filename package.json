@@ -1,0 +1,31 @@
+{
+  "name": "dx-react-simple-table",
+  "version": "1.0.0",
+  "description": "simple wrapper around @devexpress/dx-react-grid",
+  "main": "dx_table.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sauron4er/dx-react-simple-table.git"
+  },
+  "keywords": [
+    "react-table",
+    "devexpress-table"
+  ],
+  "author": "sauron4er",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/sauron4er/dx-react-simple-table/issues"
+  },
+  "homepage": "https://github.com/sauron4er/dx-react-simple-table#readme",
+  "dependencies": {
+    "@devexpress/dx-core": "^2.7.0",
+    "@devexpress/dx-react-core": "^2.7.0",
+    "@devexpress/dx-react-grid": "^2.7.0",
+    "@material-ui/core": "^4.11.0",
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1"
+  }
+}
