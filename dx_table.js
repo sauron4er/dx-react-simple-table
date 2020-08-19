@@ -170,17 +170,6 @@ class DxTable extends React.PureComponent {
     };
   }
 
-  // внутрішні настройки рядка ReactGrid
-  TableRow({row, ...restProps}) {
-    return (<Table.Row
-      className='css_dx_table_row'
-      {...restProps}
-      // eslint-disable-next-line no-alert
-      // onClick={() => this.onRowClick(row)} - це опрацьовується в CellComponent
-      style={this.ChooseStyle(row)}
-    />)
-  };
-
   arrangeFiles(files, style) {
     return (
       <td style={style}>
@@ -250,6 +239,18 @@ class DxTable extends React.PureComponent {
         padding: '1',
         fontSize: '11px'
       }}
+     children={}/>
+  };
+
+  // внутрішні настройки рядка ReactGrid
+  TableRow({row, ...restProps}) {
+    return <Table.Row
+      className='css_dx_table_row'
+      {...restProps}
+      // eslint-disable-next-line no-alert
+      // onClick={() => this.onRowClick(row)} - це опрацьовується в CellComponent
+      style={this.ChooseStyle(row)}
+      children={}
     />
   };
 
