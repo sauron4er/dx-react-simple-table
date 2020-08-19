@@ -171,17 +171,17 @@ class DxTable extends React.PureComponent {
   }
 
   // внутрішні настройки рядка ReactGrid
-  TableRow = ({row, ...restProps}) => (
-    <Table.Row
+  TableRow({row, ...restProps}) {
+    return <Table.Row
       className='css_dx_table_row'
       {...restProps}
       // eslint-disable-next-line no-alert
       // onClick={() => this.onRowClick(row)} - це опрацьовується в CellComponent
       style={this.ChooseStyle(row)}
     />
-  );
+  };
 
-  arrangeFiles = (files, style) => {
+  arrangeFiles(files, style) {
     return (
       <td style={style}>
         <For each='file' index='id' of={files}>
@@ -195,14 +195,14 @@ class DxTable extends React.PureComponent {
     );
   };
 
-  autoActuality = (date_start, date_end) => {
+  autoActuality(date_start, date_end) {
     if (new Date(date_start) > this.state.today) return 'yellow';
     if (date_end !== '' && new Date(date_end) < this.state.today) return 'red';
     return 'lightgreen';
   };
 
   // Налаштування комірки
-  CellComponent = (props) => {
+  CellComponent(props) {
     let cell_value = props.value;
 
     let style = {
@@ -243,15 +243,15 @@ class DxTable extends React.PureComponent {
     return <Table.Cell onClick={() => this.onRowClick(props.row)} {...props} value={cell_value} style={style} />;
   };
 
-  HeaderCellComponent = (props) => (
-    <TableHeaderRow.Cell
+  HeaderCellComponent(props) {
+    return <TableHeaderRow.Cell
       {...props}
       style={{
         padding: '1',
         fontSize: '11px'
       }}
     />
-  );
+  };
 
   // передача інфу про клікнутий рядок наверх
   onRowClick(row) {
